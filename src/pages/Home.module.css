@@ -1,0 +1,17 @@
+.maskedText {
+  color: transparent;
+  background-image: linear-gradient(90deg, #84c23d, #5da0d5);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: animate-background 2s linear infinite;
+}
+
+@keyframes animate-background {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
