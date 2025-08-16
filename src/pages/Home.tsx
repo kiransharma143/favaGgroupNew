@@ -79,6 +79,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
+import BrandsMarquee from "@/components/ui/BrandMarquee";
 
 const Home = () => {
   const { toast } = useToast();
@@ -355,7 +356,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen" style={{ fontFamily: "Georgia, serif" }}>
+  <div className="min-h-screen" style={{ fontFamily: "Georgia, serif" }}>
       {/* Hero Section */}
       <section
   id="home"
@@ -460,7 +461,7 @@ const Home = () => {
       <section
         ref={aboutAnimation.ref as React.RefObject<HTMLElement>}
         id="about"
-        className={`relative py-20 w-full overflow-hidden transition-all duration-700 ${
+  className={`scroll-mt-[104px] relative py-20 w-full overflow-hidden transition-all duration-700 ${
           aboutAnimation.isVisible
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-20"
@@ -490,7 +491,7 @@ const Home = () => {
             >
               <div className="w-full text-gray-700 text-lg leading-relaxed space-y-6 text-center lg:text-left px-2 md:px-6">
                 <p>
-                  <span className="font-bold text-[#84c23d]">Fava Group</span>{" "}
+                  <span className="font-bold text-[#84c23d]">Fava Glocal</span>{" "}
                   is a growing enterprise with over 40 years of multi-sector
                   expertise across FMCG, Finance, Export, Warehousing,
                   Distribution, Manpower, and Marketing. Guided by our core
@@ -511,7 +512,7 @@ const Home = () => {
                 </p>
                 <p>
                   By offering end-to-end business solutions under one roof,{" "}
-                  <span className="font-bold text-[#84c23d]">Fava Group</span>{" "}
+                  <span className="font-bold text-[#84c23d]">Fava Glocal</span>{" "}
                   empowers brands to enter, expand, and thrive in competitive
                   markets — making us the trusted partner for sustainable
                   growth.
@@ -540,8 +541,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Vision & Mission Section - Enhanced with Animation */}
-  <section className="w-full py-16 bg-white">
+    {/* Vision & Mission Section - Enhanced with Animation */}
+  <section id="vision-mission" className="scroll-mt-24 w-full py-16 bg-white">
         {/* Main Title */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#84c23d] to-[#5da0d5] bg-clip-text text-transparent">
@@ -681,7 +682,8 @@ const Home = () => {
       {/* Channel Wise Coverage Section - Enhanced */}
       <section
         ref={channelAnimation.ref as React.RefObject<HTMLElement>}
-        className="relative py-20 bg-gradient-to-br from-[#f0f7ff] via-[#e0f7fa] to-[#e3fcec] overflow-hidden"
+        id="channel-coverage"
+        className="scroll-mt-24 relative py-20 bg-gradient-to-br from-[#f0f7ff] via-[#e0f7fa] to-[#e3fcec] overflow-hidden"
       >
         {/* Decorative Blobs */}
         <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#5da0d5] opacity-20 rounded-full blur-3xl z-0 animate-float2" />
@@ -763,7 +765,7 @@ const Home = () => {
       {/* Services Section - Enhanced */}
       <section
         id="services"
-        className="relative py-20 bg-gradient-to-br from-[#e0f7fa] via-[#f0f7ff] to-[#e3fcec] overflow-hidden transition-all duration-700 opacity-100 translate-y-0"
+        className="scroll-mt-24 relative py-20 bg-gradient-to-br from-[#e0f7fa] via-[#f0f7ff] to-[#e3fcec] overflow-hidden transition-all duration-700 opacity-100 translate-y-0"
       >
         {/* Decorative Blobs */}
         <div className="absolute -top-32 -left-32 w-96 h-96 bg-[cornflowerblue] opacity-20 rounded-full blur-3xl z-0 animate-float1" />
@@ -864,7 +866,7 @@ const Home = () => {
       </section>
 
       {/* Warehouse & Facilities Section */}
-      <section className="relative py-20 bg-gradient-to-br from-[#f0f7ff] via-[#e0f7fa] to-[#e3fcec] overflow-hidden duration-700">
+  <section id="warehouse" className="scroll-mt-24 relative py-20 bg-gradient-to-br from-[#f0f7ff] via-[#e0f7fa] to-[#e3fcec] overflow-hidden duration-700">
         {/* Animated Blobs & Sparkles */}
         <div className="absolute -top-24 -left-24 w-80 h-80 bg-[cornflowerblue] opacity-20 rounded-full blur-3xl z-0 animate-float1" />
         <div className="absolute -bottom-24 right-0 w-80 h-80 bg-[#84c23d] opacity-20 rounded-full blur-3xl z-0 animate-float2" />
@@ -1009,7 +1011,7 @@ const Home = () => {
       <section
         ref={partnersAnimation.ref as React.RefObject<HTMLElement>}
         id="business-associates"
-        className={`py-16 bg-white transition-all duration-700 ${
+        className={`scroll-mt-24 py-16 bg-white transition-all duration-700 ${
           partnersAnimation.isVisible
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-20"
@@ -1027,7 +1029,7 @@ const Home = () => {
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <Carousel className="w-full" opts={{ align: "start", loop: true }}>
+            {/* <Carousel className="w-full" opts={{ align: "start", loop: true }}>
               <CarouselContent className="-ml-2 md:-ml-4">
                 {businessAssociates.map((associate, index) => (
                   <CarouselItem
@@ -1059,13 +1061,14 @@ const Home = () => {
               </CarouselContent>
               <CarouselPrevious className="left-0" />
               <CarouselNext className="right-0" />
-            </Carousel>
+            </Carousel> */}
+            <BrandsMarquee/>
           </div>
         </div>
       </section>
 
       {/* Approach Section */}
-     <section id="approach" className="py-16 bg-gray-50 duration-700">
+  <section id="approach" className="scroll-mt-24 py-16 bg-gray-50 duration-700">
   <div className="container mx-auto px-4 relative z-10">
     <div className="text-center mb-12">
       <h2 className="text-5xl md:text-6xl font-extrabold mb-2 animate-gradient-text bg-gradient-to-r from-[#5da0d5] via-[#84c23d] to-[#5da0d5] bg-clip-text text-transparent drop-shadow-lg">
@@ -1183,7 +1186,7 @@ const Home = () => {
       <section
         ref={teamAnimation.ref as React.RefObject<HTMLElement>}
         id="team"
-        className={`py-16 bg-white transition-all duration-700 ${
+        className={`scroll-mt-24 py-16 bg-white transition-all duration-700 ${
           teamAnimation.isVisible
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-20"
@@ -1340,7 +1343,7 @@ const Home = () => {
      <section
   ref={contactAnimation.ref as React.RefObject<HTMLElement>}
   id="contact"
-  className={`py-16 bg-gray-50 transition-all duration-700 ${
+  className={`scroll-mt-24 py-16 bg-gray-50 transition-all duration-700 ${
     contactAnimation.isVisible
       ? "opacity-100 translate-y-0"
       : "opacity-0 translate-y-20"
@@ -1496,7 +1499,7 @@ const Home = () => {
           </p>
           <Button
             size="lg"
-            className="bg-[cornflowerblue] hover:bg-blue-500 px-8 transform hover:scale-105 transition-all duration-300 animate-fade-in"
+            className="bg-[cornflowerblue] hover:bg-blue-500 px-8 transform hover:scale-105 transition-all duration-300 animate-fade-in font-sans font-poppins font-semibold"
             style={{ animationDelay: "0.2s" }}
             onClick={() =>
               document

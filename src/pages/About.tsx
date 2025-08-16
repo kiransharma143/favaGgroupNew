@@ -31,7 +31,7 @@ const About = () => {
   <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20 font-sans">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold font-poppins mb-6">About FAVA Group</h1>
+            <h1 className="text-5xl font-bold font-poppins mb-6">About Fava Glocal</h1>
             <p className="text-xl text-blue-100">
               Four decades of excellence in business solutions and strategic partnerships
             </p>
@@ -48,7 +48,7 @@ const About = () => {
                 Our Story
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                FAVA Group is a growing enterprise with over four decades of experience in sectors like FMCG, Finance, Export, Warehousing, Distribution, Manpower, and Marketing. We have built our reputation on delivering comprehensive business solutions that drive growth and success.
+                Fava Glocal is a growing enterprise with over four decades of experience in sectors like FMCG, Finance, Export, Warehousing, Distribution, Manpower, and Marketing. We have built our reputation on delivering comprehensive business solutions that drive growth and success.
               </p>
               <p className="text-lg text-gray-600 mb-6">
                 Our journey began with a simple vision: to nurture the seeds of business growth by providing integrated solutions that address every aspect of business development. Today, we stand as a trusted partner for startups and emerging brands seeking to establish themselves in competitive markets.

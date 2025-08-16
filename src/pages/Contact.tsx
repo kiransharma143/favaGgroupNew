@@ -167,7 +167,7 @@ const Contact = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join hundreds of successful businesses that have partnered with FAVA Group to achieve their growth objectives.
+            Join hundreds of successful businesses that have partnered with Fava Glocal to achieve their growth objectives.
           </p>
           <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
             Schedule a Consultation
